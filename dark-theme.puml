@@ -1,64 +1,129 @@
-skinparam BackgroundColor FFFFFF
+
+''
+'' Dark theme
+''
+'' Author: Paulo Cardoso
+'' Copyright (c) 2021 by Paul Cardoso
+
+!$THEME = "dark"
+
+!$BGCOLOR = "1f2933"
+!$SECUNDARY_BGCOLOR = "3a434c"
+!$THIRD_BGCOLOR = "333d45"
+
+
+!$BORDER_COLOR = "efc7a3"
+!$PRIMARY_FONT_COLOR = "d9dbdf"
+!$SECUNDARY_FONT_COLOR = "efc7a3"
+
+
+skinparam BackgroundColor $BGCOLOR
 skinparam shadowing false
-skinparam RoundCorner 7
-skinparam ArrowColor 454645
-skinparam FontColor 454645
-skinparam SequenceLifeLineBorderColor 696969
-skinparam SequenceGroupHeaderFontColor 454645
-skinparam SequenceGroupFontColor 696969
-skinparam SequenceGroupBorderColor 696969
-skinparam SequenceGroupBorderThickness 1
+skinparam RoundCorner 9
+skinparam FontColor $PRIMARY_FONT_COLOR
+
+skinparam SequenceLifeLineBorderColor $BORDER_COLOR
+
+
+!startsub sequence
+
+skinparam sequence {
+	
+	''
+	BoxBackgroundColor $SECUNDARY_BGCOLOR
+	BoxBorderColor $BORDER_COLOR
+	BoxFontColor $PRIMARY_FONT_COLOR
+	''
+  LifeLineBorderColor 4a433e
+	LifeLineBorderThickness .5
+	LifeLineBackgroundColor #eec298
+
+  ''
+	GroupBorderColor efc7a3
+	GroupFontColor d9dbdf
+	GroupHeaderFontColor white
+	GroupBackgroundColor $BGCOLOR
+	GroupBodyBackgroundColor $THIRD_BGCOLOR
+	GroupHeaderBackgroundColor $BGCOLOR
+  GroupBorderThickness 1
+
+}
+!endsub
+
+!startsub control
+
+skinparam control {
+	BackgroundColor $SECUNDARY_BGCOLOR
+  BorderColor 454645
+  FontColor d9dbdf
+}
+!endsub
+
+
+!startsub arrow
+
+skinparam arrow {
+	Thickness .5
+	Color $PRIMARY
+	FontColor $PRIMARY_FONT_COLOR
+}
+!endsub
+
 
 skinparam sequenceDivider {
-    BorderColor 454645
+    BorderColor efc7a3
     BorderThickness 1
-    FontColor 454645
+    FontColor 1f2933
 }
+
+!startsub participant
 
 skinparam participant {
-    BackgroundColor FF6347
-    BorderColor FF6F61
-    FontColor FFFFFF
+  BackgroundColor 52606D
+  BorderColor efc7a3
+  BorderThickness 1
+  FontColor d9dbdf
+  Padding 20
 }
+!endsub
+
 
 skinparam database {
-    BackgroundColor 00FFFF
+    BackgroundColor 52606D
     BorderColor 454645
-    FontColor 454645
+    FontColor d9dbdf
 }
 
 skinparam entity {
-    BackgroundColor FFE552
+    BackgroundColor 52606D
     BorderColor 454645
-    FontColor 454645
+    FontColor d9dbdf
 }
 
 skinparam note {
     BackgroundColor 7FFFD4
     BorderColor 7FFFD4
-    FontColor 454645
+    FontColor d9dbdf
 }
 
 skinparam actor {
-    BackgroundColor 454645
-    BorderColor 454645
-    FontColor 454645
+    BackgroundColor 52606D
+    BorderColor 52606D
+    FontColor d9dbdf
 }
 
 skinparam boundary {
     BackgroundColor FFE552
     BorderColor 454645
-    FontColor 454645
+    FontColor d9dbdf
 }
 
-skinparam control {
-    BackgroundColor FFE552
-    BorderColor 454645
-    FontColor 454645
-}
 
 skinparam collections {
-    BackgroundColor FF6347
+    BackgroundColor $THIRD_BGCOLOR
     BorderColor FFFFFF
-    FontColor 454645
+    FontColor d9dbdf
 }
+
+skinparam actorStyle awesome
+skinparam style strictuml
